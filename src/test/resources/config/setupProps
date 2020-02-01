@@ -1,0 +1,5 @@
+browser=chrome
+
+chromeDriver=/src/test/resources/drivers/chromedriver.exe
+
+url=http://www.newtours.demoaut.com/mercurysignon.php
