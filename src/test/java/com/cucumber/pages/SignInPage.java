@@ -10,6 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.cucumber.init.TestSetup;
 
+/**
+ * @author Renuka R Hosamani
+ *
+ * 
+ */
 public class SignInPage extends TestSetup{
 	
 	private final WebDriver driver;

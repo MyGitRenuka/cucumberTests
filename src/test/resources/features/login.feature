@@ -10,6 +10,7 @@ Background:
 	Scenario: Sign in to the website using valid credentials
 	Given I am in sign in page
 	When I enter the user email as "user@gmail.com"
+	#password should be in base64 encoded format
 	And I enter the password as "password"
 	And Click on sign in submit button
 	Then I am signed in to the website
