@@ -3,7 +3,7 @@
 <suite name="BDD Test Suite">
     <test name="Regression Test" preserve-order="true">
         <classes>
-           <!--  <class name="com.test.runner.RunCucumberTest" /> -->
+            <class name="com.cucumber.runner.RunCucumberTest" />
         </classes>
     </test>
 </suite>

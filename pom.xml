@@ -83,7 +83,7 @@
 				<version>2.19.1</version>
 				<configuration>
 				<testFailureIgnore>true </testFailureIgnore>
-					<suiteXmlFiles>src/test/resources/testSuites/searchTest.xml</suiteXmlFiles>
+					<suiteXmlFiles>src/test/resources/testSuites/loginTest.xml</suiteXmlFiles>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -1,10 +1,5 @@
-2020-02-01 20:02:222 INFO  Hooks:20 - Hooks before_0: Clearing the cookies
-2020-02-01 20:02:197 INFO  Hooks:28 - Hooks before_1: Scenario started "Sign in to the website" started
-2020-02-01 20:02:630 INFO  Hooks:46 - Hooks after_1: quitting the browser
-2020-02-01 20:02:614 INFO  Hooks:33 - Hooke after_0: End of scenario "Sign in to the website"
-2020-02-01 20:02:615 INFO  Hooks:40 - Hooks after_0: Scenario "Sign in to the website" passed
-2020-02-01 20:02:622 INFO  Hooks:20 - Hooks before_0: Clearing the cookies
-2020-02-01 20:02:644 INFO  Hooks:28 - Hooks before_1: Scenario started "Sign in as guest user" started
-2020-02-01 20:02:753 INFO  Hooks:46 - Hooks after_1: quitting the browser
-2020-02-01 20:02:735 INFO  Hooks:33 - Hooke after_0: End of scenario "Sign in as guest user"
-2020-02-01 20:02:736 INFO  Hooks:40 - Hooks after_0: Scenario "Sign in as guest user" passed
+2020-02-03 14:02:905 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
+2020-02-03 14:02:741 INFO  Hooks:33 - Hooks before_1: Scenario started "Sign in to the website using valid credentials" started
+2020-02-03 15:02:479 INFO  Hooks:51 - Hooks after_1: quitting the browser
+2020-02-03 15:02:808 INFO  Hooks:38 - Hooke after_0: End of scenario "Sign in to the website using valid credentials"
+2020-02-03 15:02:809 INFO  Hooks:45 - Hooks after_0: Scenario "Sign in to the website using valid credentials" passed
