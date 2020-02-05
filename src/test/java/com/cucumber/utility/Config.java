@@ -17,7 +17,7 @@ public class Config {
 	public static Properties testConfig;
 	
 	public static void setProperties() throws IOException {
-		FileReader reader = new FileReader("src/test/resources/config/setupProps");
+		FileReader reader = new FileReader("src/test/resources/config/testConfig.properties");
 		testConfig = new Properties();
 		testConfig.load(reader);	
 		

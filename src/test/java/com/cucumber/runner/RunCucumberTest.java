@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
  *
  * 
  */
-@CucumberOptions(features= {"src/test/resources/features"},
+@CucumberOptions(features= {"src/test/resources/features/search"},
 				 glue= {"com.cucumber.steps"}, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 							"json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/cucumber-reports/rerun.txt" })
 

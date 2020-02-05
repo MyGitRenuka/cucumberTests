@@ -1,7 +1,11 @@
-C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\pages\LoginPage.java
 C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\steps\Hooks.java
-C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\steps\Stepdefs.java
+C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\pages\SignInPage.java
+C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\steps\Sign_in_steps.java
 C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\utility\Log.java
+C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\pages\ProductsPage.java
+C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\pages\ProductPage.java
+C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\steps\Search_steps.java
 C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\utility\Config.java
 C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\runner\RunCucumberTest.java
+C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\pages\HomePage.java
 C:\Users\Dell\Desktop\RENUKA_DOCS\ECLIPSE\MY_WORKSPACE\myFramework\src\test\java\com\cucumber\init\TestSetup.java

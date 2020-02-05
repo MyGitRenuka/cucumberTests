@@ -30,10 +30,10 @@ public class Hooks {
 	
 	@Before(order=1)
 	public void beforeScenarioStart(Scenario scenario) throws IOException {
-		log.info("Hooks before_1: Scenario started \"" + scenario.getName() + "\" started");
+		log.info("Hooks before_1: Scenario \"" + scenario.getName() + "\" started");
 	}
 	
-	@After(order=0)
+	@After(order=1)
 	public void afterScenarioEnd(Scenario scenario) {
 		log.info("Hooke after_0: End of scenario \"" + scenario.getName() + "\"");
 		if(scenario.isFailed())
@@ -46,7 +46,7 @@ public class Hooks {
 		}
 	}
 	
-	@After(order=1)
+	@After(order=0)
 	public void quitBrowser(Scenario scenario) {
 		log.info("Hooks after_1: quitting the browser");
 		TestSetup.driver.quit();

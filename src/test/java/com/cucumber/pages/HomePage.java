@@ -1,5 +1,7 @@
 package com.cucumber.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,14 +16,14 @@ import com.cucumber.init.TestSetup;
  */
 public class HomePage extends TestSetup{
 	
-	private final WebDriver driver;
+	private WebDriver driver;
 	
 	public WebDriver getDriver() {
-		return driver;
+		return this.driver;
 	}
 
 	public void getUrl(String url) {
-		driver.get(url);
+		this.driver.get(url);
 	}
 	
 	public HomePage(WebDriver driver) {
@@ -29,8 +31,36 @@ public class HomePage extends TestSetup{
 		PageFactory.initElements(driver, this);
 	}
 	
+	public HomePage(){
+		
+	}
+	
+	
 	@FindBy(xpath="//*[@id='nav-link-accountList']/span[1]")
 	public WebElement SignIn;
+	
+	@FindBy(xpath="//*[@id='twotabsearchtextbox']")
+	public WebElement searchTextbox;
+	
+	@FindBy(xpath="//*[@value='Go']")
+	public WebElement searchSubmit;
+			
+	
+	public WebElement getSearchSubmit() {
+		return searchSubmit;
+	}
+
+	public void clickSearch() {
+		getSearchSubmit().click();
+	}
+	
+	public WebElement getSearchTextbox() {
+		return searchTextbox;
+	}
+
+	public void enterSearchText(String searchFor) {
+		getSearchTextbox().sendKeys(searchFor);
+	}
 	
 	public WebElement getSignIn() {
 		return SignIn;
