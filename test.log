@@ -1,10 +1,12 @@
-2020-02-05 23:02:545 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
-2020-02-05 23:02:648 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
-2020-02-05 23:02:979 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
-2020-02-05 23:02:980 INFO  Hooks:45 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" passed
-2020-02-05 23:02:982 INFO  Hooks:51 - Hooks after_1: quitting the browser
-2020-02-05 23:02:105 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
-2020-02-05 23:02:407 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
-2020-02-05 23:02:58 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
-2020-02-05 23:02:59 INFO  Hooks:45 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" passed
-2020-02-05 23:02:60 INFO  Hooks:51 - Hooks after_1: quitting the browser
+2020-02-07 13:02:193 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
+2020-02-07 13:02:619 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
+2020-02-07 13:02:386 INFO  ProductPage:54 - Expected price is $257.99 and actual price is $274.99
+2020-02-07 13:02:875 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
+2020-02-07 13:02:875 INFO  Hooks:41 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" failed
+2020-02-07 13:02:883 INFO  Hooks:51 - Hooks after_1: quitting the browser
+2020-02-07 13:02:382 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
+2020-02-07 13:02:96 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
+2020-02-07 13:02:203 INFO  ProductPage:54 - Expected price is $111.99 and actual price is $111.99
+2020-02-07 13:02:253 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
+2020-02-07 13:02:253 INFO  Hooks:45 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" passed
+2020-02-07 13:02:253 INFO  Hooks:51 - Hooks after_1: quitting the browser

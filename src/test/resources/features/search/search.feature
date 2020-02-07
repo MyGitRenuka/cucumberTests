@@ -6,7 +6,7 @@ Scenario Outline: Search for a product and get the details of a specific product
 Given I am in home page
 When I search for the product "<product>"
 And I click on the product "<product_name>"
-Then I can see the "<price>" and "<reviews>" of the selected product
+Then I can see the price "<price>" and review "<reviews>" of the selected product
 
 Examples:
 	| product 		| product_name 																																						 																								 | price  		| reviews |

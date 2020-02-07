@@ -1,27 +1,25 @@
 package com.cucumber.pages;
 
 import java.util.List;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.cucumber.init.TestSetup;
-import com.cucumber.utility.Config;
 
 /**
  * @author Renuka R Hosamani
  *
  * 
  */
-public class ProductsPage extends HomePage{
+public class ProductsPage {
 	
 	private WebDriver driver;
-		
+	private static Logger log = Logger.getLogger(ProductsPage.class);
+
 	public ProductsPage(WebDriver driver) {
-		super(driver);
-		this.driver=getDriver();
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -41,12 +39,11 @@ public class ProductsPage extends HomePage{
 			if(product.equals(ele.getText())) {
 				return true;
 			}
-			//System.out.println("\n" + ele.getText() +".........................................");
 		}
 		return false;
 	}
 
-	public void clickOnProduct(String product) {
+	public ProductPage goToProductPage(String product) {
 		
 		List<WebElement> list_of_prods = getProductLinks();
 		
@@ -57,6 +54,8 @@ public class ProductsPage extends HomePage{
 				break;
 			}
 		}
+		
+		return new ProductPage(driver);
 	}
 			
 }

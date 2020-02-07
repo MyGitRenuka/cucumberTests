@@ -1,13 +1,11 @@
 package com.cucumber.pages;
 
-import java.util.List;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import com.cucumber.init.TestSetup;
+import org.testng.Assert;
 import com.cucumber.utility.Config;
 
 /**
@@ -15,15 +13,15 @@ import com.cucumber.utility.Config;
  *
  * 
  */
-public class ProductPage extends ProductsPage {
+public class ProductPage {
 	
 	private WebDriver driver;
-	
+	private static Logger log = Logger.getLogger(ProductPage.class);
+		
 	public WebDriver getDriver() {
 		return this.driver;
 	}
 	public ProductPage(WebDriver driver) {
-		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -42,12 +40,25 @@ public class ProductPage extends ProductsPage {
 		return ratings;
 	}
 	
-	public boolean verifyPrice(String price) {
-		return getSalePrice().getText().equals(price);
+	public void priceDisplayed() {		
+		Assert.assertTrue(getSalePrice().isDisplayed(),"Product price is displyed");
+		
 	}
 	
-	public boolean verifyRating(String rating) {
-		return getRatings().getAttribute("textContent").contains(Config.testConfig.getProperty(rating));
+	public void reviewDisplayed() {
+		Assert.assertTrue(getRatings().isDisplayed(),"Review rating is displayed");
 	}
+			
+	public void verifyPrice(String price) {
+		boolean cond = getSalePrice().getText().equals(price);
+		log.info("Expected price is " + price + " and actual price is " + getSalePrice().getText());
+		Assert.assertTrue(cond, "Actual and expected price are same");
+	}
+	
+	public void verifyRating(String rating) {
+		boolean cond = getRatings().getAttribute("textContent").contains(Config.testConfig.getProperty(rating));
+		Assert.assertTrue(cond, "Actual and expected review ratings are same");
+	}
+	
 }
 

@@ -14,7 +14,7 @@ import com.cucumber.init.TestSetup;
  *
  * 
  */
-public class HomePage extends TestSetup{
+public class HomePage {
 	
 	private WebDriver driver;
 	
@@ -31,11 +31,6 @@ public class HomePage extends TestSetup{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public HomePage(){
-		
-	}
-	
-	
 	@FindBy(xpath="//*[@id='nav-link-accountList']/span[1]")
 	public WebElement SignIn;
 	
@@ -50,10 +45,11 @@ public class HomePage extends TestSetup{
 		return searchSubmit;
 	}
 
-	public void clickSearch() {
+	public ProductsPage goToProductsPage() {
 		getSearchSubmit().click();
+		return new ProductsPage(driver);
 	}
-	
+		
 	public WebElement getSearchTextbox() {
 		return searchTextbox;
 	}
