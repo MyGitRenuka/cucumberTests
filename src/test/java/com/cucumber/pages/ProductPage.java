@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.cucumber.utility.Config;
+import com.cucumber.validations.Verifier;
 
 /**
  * @author Renuka R Hosamani
@@ -40,24 +41,25 @@ public class ProductPage {
 		return ratings;
 	}
 	
-	public void priceDisplayed() {		
-		Assert.assertTrue(getSalePrice().isDisplayed(),"Product price is displyed");
+	public void priceDisplayed() {	
 		
+		Verifier.verifyElementDisplayed(getSalePrice(),"Product price");
 	}
 	
 	public void reviewDisplayed() {
-		Assert.assertTrue(getRatings().isDisplayed(),"Review rating is displayed");
+		Verifier.verifyElementDisplayed(getRatings(),"Review rating");
 	}
 			
 	public void verifyPrice(String price) {
-		boolean cond = getSalePrice().getText().equals(price);
+		String message = "Actual and expected sale price are same";
 		log.info("Expected price is " + price + " and actual price is " + getSalePrice().getText());
-		Assert.assertTrue(cond, "Actual and expected price are same");
+		Verifier.verifyText(price, getSalePrice().getText(),message);
 	}
 	
-	public void verifyRating(String rating) {
-		boolean cond = getRatings().getAttribute("textContent").contains(Config.testConfig.getProperty(rating));
-		Assert.assertTrue(cond, "Actual and expected review ratings are same");
+	public void verifyRating(String rating,String ratingFromJson) {
+		
+		Verifier.verifyTrue(getRatings().getAttribute("textContent").contains(ratingFromJson), 
+				"Actual and expected review ratings are same");
 	}
 	
 }

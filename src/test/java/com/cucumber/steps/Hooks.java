@@ -22,7 +22,7 @@ public class Hooks {
 	
 	@Before(order=0)
 	public void clearCookies() throws IOException {
-		log.info("Hooks before_0: Clearing the cookies");
+		log.info("before_0: Clearing the cookies");
 		testBase = new TestSetup();
 		testBase.setWebdriver();
 		TestSetup.driver.manage().deleteAllCookies();
@@ -30,25 +30,25 @@ public class Hooks {
 	
 	@Before(order=1)
 	public void beforeScenarioStart(Scenario scenario) throws IOException {
-		log.info("Hooks before_1: Scenario \"" + scenario.getName() + "\" started");
+		log.info("before_1: Scenario \"" + scenario.getName() + "\" started");
 	}
 	
 	@After(order=1)
 	public void afterScenarioEnd(Scenario scenario) {
-		log.info("Hooke after_0: End of scenario \"" + scenario.getName() + "\"");
+		log.info("after_0: End of scenario \"" + scenario.getName() + "\"");
 		if(scenario.isFailed())
 		{
-			log.info("Hooks after_0: Scenario \"" + scenario.getName() + "\" failed");
+			log.error("after_0: Scenario \"" + scenario.getName() + "\" failed");
 		}
 		else
 		{
-			log.info("Hooks after_0: Scenario \"" + scenario.getName() + "\" passed");
+			log.info("after_0: Scenario \"" + scenario.getName() + "\" passed");
 		}
 	}
 	
 	@After(order=0)
 	public void quitBrowser(Scenario scenario) {
-		log.info("Hooks after_1: quitting the browser");
+		log.info("after_1: quitting the browser");
 		TestSetup.driver.quit();
 	}
 }

@@ -1,12 +1,21 @@
-2020-02-07 13:02:193 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
-2020-02-07 13:02:619 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
-2020-02-07 13:02:386 INFO  ProductPage:54 - Expected price is $257.99 and actual price is $274.99
-2020-02-07 13:02:875 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
-2020-02-07 13:02:875 INFO  Hooks:41 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" failed
-2020-02-07 13:02:883 INFO  Hooks:51 - Hooks after_1: quitting the browser
-2020-02-07 13:02:382 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
-2020-02-07 13:02:96 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
-2020-02-07 13:02:203 INFO  ProductPage:54 - Expected price is $111.99 and actual price is $111.99
-2020-02-07 13:02:253 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
-2020-02-07 13:02:253 INFO  Hooks:45 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" passed
-2020-02-07 13:02:253 INFO  Hooks:51 - Hooks after_1: quitting the browser
+2020-02-07 20:02:942 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
+2020-02-07 20:02:214 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
+2020-02-07 20:02:907 INFO  Verifier:27 - Verifying: Product "ARRIS Surfboard Docsis 3.1 Gigabit Cable Modem Plus AC2350 Dual Band Wi-Fi Router, Certified for Xfinity, and Cox 1 GB Service (SBG8300) " is in the search result
+2020-02-07 20:02:557 INFO  Verifier:16 - Verifying: Product price
+2020-02-07 20:02:648 INFO  Verifier:16 - Verifying: Review rating
+2020-02-07 20:02:216 INFO  ProductPage:55 - Expected price is $257.99 and actual price is $274.99
+2020-02-07 20:02:260 INFO  Verifier:22 - Verifying: Strings $257.99 and $274.99 are equal
+2020-02-07 20:02:299 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
+2020-02-07 20:02:299 INFO  Hooks:41 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" failed
+2020-02-07 20:02:299 INFO  Hooks:51 - Hooks after_1: quitting the browser
+2020-02-07 20:02:539 INFO  Hooks:25 - Hooks before_0: Clearing the cookies
+2020-02-07 20:02:667 INFO  Hooks:33 - Hooks before_1: Scenario "Search for a product and get the details of a specific product from search results" started
+2020-02-07 20:02:843 INFO  Verifier:27 - Verifying: Product "LG Electronics 24LH4830-PU 24-Inch Smart LED TV (2016 Model) " is in the search result
+2020-02-07 20:02:302 INFO  Verifier:16 - Verifying: Product price
+2020-02-07 20:02:353 INFO  Verifier:16 - Verifying: Review rating
+2020-02-07 20:02:461 INFO  ProductPage:55 - Expected price is $111.99 and actual price is $111.99
+2020-02-07 20:02:613 INFO  Verifier:22 - Verifying: Strings $111.99 and $111.99 are equal
+2020-02-07 20:02:641 INFO  Verifier:27 - Verifying: Actual and expected review ratings are same
+2020-02-07 20:02:641 INFO  Hooks:38 - Hooke after_0: End of scenario "Search for a product and get the details of a specific product from search results"
+2020-02-07 20:02:645 INFO  Hooks:45 - Hooks after_0: Scenario "Search for a product and get the details of a specific product from search results" passed
+2020-02-07 20:02:645 INFO  Hooks:51 - Hooks after_1: quitting the browser

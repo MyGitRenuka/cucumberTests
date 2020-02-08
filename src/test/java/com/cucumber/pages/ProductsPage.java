@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.cucumber.validations.Verifier;
+
 
 /**
  * @author Renuka R Hosamani
@@ -30,17 +32,17 @@ public class ProductsPage {
 		return productLinks;
 	}
 	
-	public boolean isProductInTheList(String product) {
+	public void isProductInTheList(String product) {
 
 		List<WebElement> list_of_prods = getProductLinks();
-		
+		String message= "Product \"" +  product + " \" is in the search result"; 		
 		for(WebElement ele: list_of_prods)
 		{
 			if(product.equals(ele.getText())) {
-				return true;
+				Verifier.verifyTrue(true, message);
+				break;
 			}
 		}
-		return false;
 	}
 
 	public ProductPage goToProductPage(String product) {

@@ -4,10 +4,8 @@ import com.cucumber.init.TestSetup;
 import com.cucumber.pages.HomePage;
 import com.cucumber.pages.ProductPage;
 import com.cucumber.pages.ProductsPage;
-import com.cucumber.pages.SignInPage;
 import com.cucumber.utility.Config;
-import com.cucumber.validations.Verifier;
-import cucumber.api.java.en.Given;
+import com.cucumber.utility.JsonReader;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
@@ -22,6 +20,8 @@ public class Search_steps extends TestSetup {
 	ProductPage product;
 	ProductsPage products;
 	HomePage homePage = new HomePage(driver);
+	JsonReader jsonReader = new JsonReader(Config.testConfig.getProperty("searchTestFile"),
+								Config.testConfig.getProperty("searchTestFilePath"));
 	
 	@When("^I search for the product \"([^\"]*)\"$")
 	public void i_search_for_the_product(String prod) throws Throwable {
@@ -31,8 +31,7 @@ public class Search_steps extends TestSetup {
 
 	@When("^I click on the product \"([^\"]*)\"$")
 	public void i_click_on_the_product(String prod) throws Throwable {
-		String message = "Verify product " + prod + " is in the list"; 
-		Assert.assertTrue(products.isProductInTheList(prod),message);
+		products.isProductInTheList(prod);
 		product = products.goToProductPage(prod);
 	}
 
@@ -42,8 +41,7 @@ public class Search_steps extends TestSetup {
 		product.priceDisplayed();
 		product.reviewDisplayed();
 		product.verifyPrice(price);
-		product.verifyRating(reviews);
-				 
+		product.verifyRating(reviews,jsonReader.getValue(reviews));
 	}
 	
 }
