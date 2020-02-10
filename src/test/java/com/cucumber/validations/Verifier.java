@@ -3,14 +3,11 @@ package com.cucumber.validations;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+//import org.testng.asserts.SoftAssert;
 
 public class Verifier {
 	
 	private static Logger log = Logger.getLogger(Verifier.class);
-	
-	public static void verificationFailed(String message) {		
-		throw new AssertionError(message);				
-	}
 	
 	public static void verifyElementDisplayed(WebElement element,String elementToBeVerified){
 		log.info("Verifying: " + elementToBeVerified);
@@ -31,6 +28,4 @@ public class Verifier {
 		log.info("Verifying: " + conditionToBeVerified);
 		Assert.assertFalse(condition,conditionToBeVerified);
 	}
-	
-	
 }

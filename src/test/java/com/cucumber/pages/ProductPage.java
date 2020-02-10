@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import com.cucumber.utility.Config;
 import com.cucumber.validations.Verifier;
 
 /**
@@ -18,7 +16,7 @@ public class ProductPage {
 	
 	private WebDriver driver;
 	private static Logger log = Logger.getLogger(ProductPage.class);
-		
+			
 	public WebDriver getDriver() {
 		return this.driver;
 	}

@@ -1,6 +1,8 @@
 package com.cucumber.runner;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import cucumber.api.CucumberOptions;
@@ -29,6 +31,15 @@ public class RunCucumberTest {
 	        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 	    }
 
+	    
+	    @AfterTest
+	    public void afterTest() {
+	    	System.out.println("\n\n----------------AFTER TEST-----------------------\n\n");
+	    	
+	    }
+	    
+	    
+	    
 	    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
 	    public void feature(CucumberFeatureWrapper cucumberFeature) {
 	        testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
