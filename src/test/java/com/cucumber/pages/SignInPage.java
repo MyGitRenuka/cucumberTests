@@ -7,8 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cucumber.init.TestSetup;
+import com.cucumber.utility.ConditionalWait;
 
 /**
  * @author Renuka R Hosamani
@@ -18,6 +20,7 @@ import com.cucumber.init.TestSetup;
 public class SignInPage extends TestSetup{
 	
 	private final WebDriver driver;
+	private ConditionalWait conditionalWaits;
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -89,8 +92,16 @@ public class SignInPage extends TestSetup{
 	}
 	
 	public boolean isItSignInPage() {
-		getNavigationBar().click();
 		return getSignOutMenuOption().isDisplayed();
+	}
+	
+	public void setConditionalWait(WebDriverWait webdriverWait,long timeout) {
+		conditionalWaits = new ConditionalWait(webdriverWait, timeout);
+	}
+	
+	public void waiForSignOutVisibility() {	
+		getNavigationBar().click();
+		conditionalWaits.waitForElementVisibility(getSignOutMenuOption(), "SIGN-OUT MENU OPTION");
 	}
 
 }

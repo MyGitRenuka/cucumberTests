@@ -1,39 +1,17 @@
-2020-02-11 08:02:381 INFO  Hooks:25 - Initialising webdriver
-2020-02-11 08:02:625 INFO  TestSetup:66 - chrome driver initialized with implicit wait time [120] SECONDS
-2020-02-11 08:02:643 INFO  TestSetup:72 - chrome driver initialized with page load time [100] SECONDS
-2020-02-11 08:02:703 INFO  TestSetup:49 - ------------Deleted all cookies------------
-2020-02-11 08:02:705 INFO  Hooks:28 - SCENARIO NAME: Sign in to the website using valid credentials
-2020-02-11 08:02:51 INFO  Verifier:23 - Verifying: Sign in option present
-2020-02-11 08:02:52 INFO  Verifier:23 - Verifying: Sign-in page is displayed
-2020-02-11 08:02:52 INFO  Hooks:36 - SCENARIO NAME| Sign in to the website using valid credentials | STATUS |passed
-2020-02-11 08:02:64 INFO  Hooks:41 - -----------------quitting the browser---------------------
-
-
-2020-02-11 08:02:738 INFO  Hooks:25 - Initialising webdriver
-2020-02-11 08:02:370 INFO  TestSetup:66 - chrome driver initialized with implicit wait time [120] SECONDS
-2020-02-11 08:02:375 INFO  TestSetup:72 - chrome driver initialized with page load time [100] SECONDS
-2020-02-11 08:02:426 INFO  TestSetup:49 - ------------Deleted all cookies------------
-2020-02-11 08:02:427 INFO  Hooks:28 - SCENARIO NAME: Search for a product and get the details of a specific product from search results
-2020-02-11 08:02:605 INFO  Verifier:23 - Verifying: Product "ARRIS Surfboard Docsis 3.1 Gigabit Cable Modem Plus AC2350 Dual Band Wi-Fi Router, Certified for Xfinity, and Cox 1 GB Service (SBG8300) " is in the search result
-2020-02-11 08:02:579 INFO  Verifier:13 - Verifying: Product price
-2020-02-11 08:02:678 INFO  Verifier:13 - Verifying: Review rating
-2020-02-11 08:02:04 INFO  ProductPage:53 - Expected price is $257.99 and actual price is $282.93
-2020-02-11 08:02:60 INFO  Verifier:18 - Verifying: Actual and expected sale price are same
-2020-02-11 08:02:263 INFO  Hooks:36 - SCENARIO NAME| Search for a product and get the details of a specific product from search results | STATUS |failed
-2020-02-11 08:02:265 INFO  Hooks:41 - -----------------quitting the browser---------------------
-
-
-2020-02-11 08:02:699 INFO  Hooks:25 - Initialising webdriver
-2020-02-11 08:02:133 INFO  TestSetup:66 - chrome driver initialized with implicit wait time [120] SECONDS
-2020-02-11 08:02:137 INFO  TestSetup:72 - chrome driver initialized with page load time [100] SECONDS
-2020-02-11 08:02:149 INFO  TestSetup:49 - ------------Deleted all cookies------------
-2020-02-11 08:02:149 INFO  Hooks:28 - SCENARIO NAME: Search for a product and get the details of a specific product from search results
-2020-02-11 08:02:725 INFO  Verifier:23 - Verifying: Product "LG Electronics 24LH4830-PU 24-Inch Smart LED TV (2016 Model) " is in the search result
-2020-02-11 08:02:510 INFO  Verifier:13 - Verifying: Product price
-2020-02-11 08:02:593 INFO  Verifier:13 - Verifying: Review rating
-2020-02-11 08:02:728 INFO  ProductPage:53 - Expected price is $111.99 and actual price is $135.96
-2020-02-11 08:02:857 INFO  Verifier:18 - Verifying: Actual and expected sale price are same
-2020-02-11 08:02:859 INFO  Hooks:36 - SCENARIO NAME| Search for a product and get the details of a specific product from search results | STATUS |failed
-2020-02-11 08:02:861 INFO  Hooks:41 - -----------------quitting the browser---------------------
+2020-02-11 14:02:120 INFO  Hooks:25 - Initialising webdriver
+2020-02-11 14:02:506 INFO  TestSetup:73 - chrome driver initialized with implicit wait time [120] SECONDS
+2020-02-11 14:02:514 INFO  TestSetup:79 - chrome driver initialized with page load time [100] SECONDS
+2020-02-11 14:02:134 INFO  TestSetup:51 - ------------Deleted all cookies------------
+2020-02-11 14:02:134 INFO  Hooks:28 - SCENARIO NAME: Sign in to the website using valid credentials
+2020-02-11 14:02:508 INFO  Verifier:23 - Verifying: Sign in option present
+2020-02-11 14:02:524 INFO  TestSetup:60 - Explicit wait time set to [200] SECONDS
+2020-02-11 14:02:552 INFO  TestSetup:22 - Waiting for visibility of element SIGN IN BUTTON for [200] seconds
+2020-02-11 14:02:590 INFO  TestSetup:24 - SIGN IN BUTTON is visible now
+2020-02-11 14:02:567 INFO  TestSetup:60 - Explicit wait time set to [200] SECONDS
+2020-02-11 14:02:218 INFO  TestSetup:22 - Waiting for visibility of element SIGN-OUT MENU OPTION for [200] seconds
+2020-02-11 14:02:265 INFO  TestSetup:24 - SIGN-OUT MENU OPTION is visible now
+2020-02-11 14:02:296 INFO  Verifier:23 - Verifying: Sign-in page is displayed
+2020-02-11 14:02:312 INFO  Hooks:36 - SCENARIO NAME| Sign in to the website using valid credentials | STATUS |passed
+2020-02-11 14:02:312 INFO  Hooks:41 - -----------------quitting the browser---------------------
 
 

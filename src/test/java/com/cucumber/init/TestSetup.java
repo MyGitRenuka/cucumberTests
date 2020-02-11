@@ -18,6 +18,7 @@ public class TestSetup {
 	
 	public static WebDriver driver;
 	public static TimeUnit waitTimeUnit = TimeUnit.SECONDS;
+	public static long explicitWait;
 	public static String browser;
 	Logger log = Log.getLogger(TestSetup.class);
 	
@@ -45,6 +46,7 @@ public class TestSetup {
 	public void initialiseDriverWaits(WebDriver driver) {
 		setImplicitWait(driver);
 		setPageLoadTime(driver);
+		explicitWait=readWaitTimeFromConfig("explicitWait");
 		deleteAllCookies(driver);
 		log.info("------------Deleted all cookies------------");
 	}
@@ -55,7 +57,12 @@ public class TestSetup {
 	}
 	
 	public WebDriverWait setExplicitWait(WebDriver driver) {
-		long timeout = readWaitTimeFromConfig("explicitWait");
+		log.info("Explicit wait time set to [" + explicitWait + "] " + waitTimeUnit.toString());
+		return  new WebDriverWait(driver, explicitWait);	
+	}
+	
+	
+	public WebDriverWait setCustomExplicitWait(WebDriver driver,long timeout) {
 		log.info("Explicit wait time set to [" + timeout + "] " + waitTimeUnit.toString());
 		return  new WebDriverWait(driver, timeout);	
 	}
