@@ -1,24 +1,19 @@
 package com.cucumber.runner;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 /**
  * @author Renuka R Hosamani
  *
  * 
  */
-@CucumberOptions(features= {"src/test/resources/features/search"},
+@CucumberOptions(features= {"src/test/resources/features"},
 				 glue= {"com.cucumber.steps"}, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 							"json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/cucumber-reports/rerun.txt" })
 
@@ -31,14 +26,6 @@ public class RunCucumberTest {
 	        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 	    }
 
-	    
-	    @AfterTest
-	    public void afterTest() {
-	    	System.out.println("\n\n----------------AFTER TEST-----------------------\n\n");
-	    	
-	    }
-	    
-	    
 	    
 	    @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
 	    public void feature(CucumberFeatureWrapper cucumberFeature) {
