@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.cucumber.init.TestSetup;
 import com.cucumber.validations.Verifier;
 
 
@@ -31,38 +33,39 @@ public class ProductsPage {
 		return productLinks;
 	}
 	
-	public void isProductInTheList(String product) {
-
-		List<WebElement> list_of_prods = getProductLinks();
-		boolean flag=false;
-		String message= "Product \"" +  product + " \" is in the search result"; 		
-		for(WebElement ele: list_of_prods)
-		{
-			if(product.equals(ele.getText())) {
-				flag=true;
-				break;
-			}
-		}
-		if(flag)
-			Verifier.verifyTrue(true, message);
-		else
-			Verifier.verifyTrue(false, message);
-		
-	}
-
 	public ProductPage goToProductPage(String product) {
-		
+				
+		String message= "Product \"" +  product + " \" is in the search result"; 		
+		if(isProductInList(product))
+		{
+			log.info(message);
+			List<WebElement> list_of_prods = getProductLinks();		
+			for(WebElement ele: list_of_prods)
+			{
+				if(product.equals(ele.getText())) {
+					ele.click();
+					break;
+				}
+			}
+		}
+		else
+		{
+			log.info("Verification failed for [" + message + "]");
+			log.info(TestSetup.captureScreen(driver, "ProductNotInList"));
+			Verifier.verifyTrue(false, message);
+		}		
+		return new ProductPage(driver);
+	}
+	
+	public boolean isProductInList(String product) {
 		List<WebElement> list_of_prods = getProductLinks();
-		
 		for(WebElement ele: list_of_prods)
 		{
 			if(product.equals(ele.getText())) {
-				ele.click();
-				break;
+				return true;
 			}
 		}
-		
-		return new ProductPage(driver);
+		return false;		
 	}
 			
 }

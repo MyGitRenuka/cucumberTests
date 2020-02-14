@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.cucumber.init.TestSetup;
 import com.cucumber.validations.Verifier;
 
 /**
@@ -39,25 +41,37 @@ public class ProductPage {
 		return ratings;
 	}
 	
-	public void priceDisplayed() {	
-		
-		Verifier.verifyElementDisplayed(getSalePrice(),"Product price");
+	public boolean priceDisplayed() {	
+		return getSalePrice().isDisplayed();
 	}
 	
-	public void reviewDisplayed() {
-		Verifier.verifyElementDisplayed(getRatings(),"Review rating");
+	public boolean reviewDisplayed() {
+		return getRatings().isDisplayed();
 	}
 			
 	public void verifyPrice(String price) {
 		String message = "Actual and expected sale price are same";
-		log.info("Expected price is " + price + " and actual price is " + getSalePrice().getText());
-		Verifier.verifyText(price, getSalePrice().getText(),message);
+		log.info("Expected price is " + price + " and actual price is " + getSalePrice().getText());		
+		if(priceDisplayed() && price.equals(getSalePrice().getText())) {
+			Verifier.verifyTrue(true, message);
+		}
+		else {
+			log.info("Verification failed for [" + message + "]");
+			log.info(TestSetup.captureScreen(driver, "ProductPriceNotMatching"));
+			Verifier.verifyTrue(false, message);
+		}
 	}
 	
 	public void verifyRating(String rating,String ratingFromJson) {
-		
-		Verifier.verifyTrue(getRatings().getAttribute("textContent").contains(ratingFromJson), 
-				"Actual and expected review ratings are same");
+		String message = "Actual and expected review ratings are same";
+		if(reviewDisplayed() && getRatings().getAttribute("textContent").contains(ratingFromJson)) {
+			Verifier.verifyTrue(true, message);
+		}
+		else {
+			log.info("Verification failed for [" + message + "]");
+			log.info(TestSetup.captureScreen(driver, "ReviewRatingNotMatching"));
+			Verifier.verifyTrue(false, message);
+		}
 	}
 	
 }

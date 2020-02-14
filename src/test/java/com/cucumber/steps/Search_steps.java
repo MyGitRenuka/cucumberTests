@@ -31,15 +31,11 @@ public class Search_steps extends TestSetup {
 
 	@When("^I click on the product \"([^\"]*)\"$")
 	public void i_click_on_the_product(String prod) throws Throwable {
-		products.isProductInTheList(prod);
 		product = products.goToProductPage(prod);
 	}
 
 	@Then("^I can see the price \"([^\"]*)\" and review \"([^\"]*)\" of the selected product$")
 	public void i_can_see_the_price_and_review_of_the_selected_product(String price, String reviews) throws Throwable {
-		
-		product.priceDisplayed();
-		product.reviewDisplayed();
 		product.verifyPrice(price);
 		product.verifyRating(reviews,jsonReader.getValue(reviews));
 	}

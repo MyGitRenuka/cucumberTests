@@ -1,17 +1,48 @@
-2020-02-11 14:02:120 INFO  Hooks:25 - Initialising webdriver
-2020-02-11 14:02:506 INFO  TestSetup:73 - chrome driver initialized with implicit wait time [120] SECONDS
-2020-02-11 14:02:514 INFO  TestSetup:79 - chrome driver initialized with page load time [100] SECONDS
-2020-02-11 14:02:134 INFO  TestSetup:51 - ------------Deleted all cookies------------
-2020-02-11 14:02:134 INFO  Hooks:28 - SCENARIO NAME: Sign in to the website using valid credentials
-2020-02-11 14:02:508 INFO  Verifier:23 - Verifying: Sign in option present
-2020-02-11 14:02:524 INFO  TestSetup:60 - Explicit wait time set to [200] SECONDS
-2020-02-11 14:02:552 INFO  TestSetup:22 - Waiting for visibility of element SIGN IN BUTTON for [200] seconds
-2020-02-11 14:02:590 INFO  TestSetup:24 - SIGN IN BUTTON is visible now
-2020-02-11 14:02:567 INFO  TestSetup:60 - Explicit wait time set to [200] SECONDS
-2020-02-11 14:02:218 INFO  TestSetup:22 - Waiting for visibility of element SIGN-OUT MENU OPTION for [200] seconds
-2020-02-11 14:02:265 INFO  TestSetup:24 - SIGN-OUT MENU OPTION is visible now
-2020-02-11 14:02:296 INFO  Verifier:23 - Verifying: Sign-in page is displayed
-2020-02-11 14:02:312 INFO  Hooks:36 - SCENARIO NAME| Sign in to the website using valid credentials | STATUS |passed
-2020-02-11 14:02:312 INFO  Hooks:41 - -----------------quitting the browser---------------------
+2020-02-14 14:02:948 INFO  Hooks:27 - #########################################   NEW SCENARIO  #########################################
+2020-02-14 14:02:948 INFO  Hooks:28 - SCENARIO NAME || Sign in to the website using valid credentials || STATUS || started
+2020-02-14 14:02:963 INFO  Hooks:29 - Initialising webdriver
+2020-02-14 14:02:315 INFO  TestSetup:67 - Wait time unit successfully set to seconds
+2020-02-14 14:02:351 INFO  TestSetup:100 - chrome driver initialized with implicit wait time [80] seconds
+2020-02-14 14:02:366 INFO  TestSetup:107 - chrome driver initialized with page load time [120] seconds
+2020-02-14 14:02:614 INFO  TestSetup:113 - Deleted all cookies
+2020-02-14 14:02:614 INFO  TestSetup:76 - Successfully initialised the webdriver
+2020-02-14 14:02:200 INFO  Sign_in_steps:34 - Sign in option present
+2020-02-14 14:02:714 INFO  Sign_in_steps:40 - Navigated to sign in page
+2020-02-14 14:02:821 INFO  Sign_in_steps:47 - Email entered successfully
+2020-02-14 14:02:39 INFO  Sign_in_steps:53 - Password entered successfully
+2020-02-14 14:02:536 INFO  Sign_in_steps:59 - Sign in submitted successfully
+2020-02-14 14:02:790 INFO  Hooks:37 - SCENARIO NAME || Sign in to the website using valid credentials || STATUS ||failed
+2020-02-14 14:02:185 INFO  Hooks:51 - Teardown started..
+2020-02-14 14:02:92 INFO  Hooks:53 - Closed all the browser windows
+2020-02-14 14:02:92 INFO  Hooks:54 - #########################################   END OF SCENARIO  ########################################
 
+2020-02-14 14:02:171 INFO  Hooks:27 - #########################################   NEW SCENARIO  #########################################
+2020-02-14 14:02:171 INFO  Hooks:28 - SCENARIO NAME || Search for a product and get the details of a specific product from search results || STATUS || started
+2020-02-14 14:02:171 INFO  Hooks:29 - Initialising webdriver
+2020-02-14 14:02:565 INFO  TestSetup:67 - Wait time unit successfully set to seconds
+2020-02-14 14:02:582 INFO  TestSetup:100 - chrome driver initialized with implicit wait time [80] seconds
+2020-02-14 14:02:590 INFO  TestSetup:107 - chrome driver initialized with page load time [120] seconds
+2020-02-14 14:02:649 INFO  TestSetup:113 - Deleted all cookies
+2020-02-14 14:02:649 INFO  TestSetup:76 - Successfully initialised the webdriver
+2020-02-14 14:02:751 INFO  ProductsPage:53 - Verification failed for [Product "Sony 64GB MicroVault Q-Series USB Flash Drive (USM64GQX/B) " is in the search result]
+2020-02-14 14:02:81 INFO  ProductsPage:54 - Screenshot captured successfully
+2020-02-14 14:02:87 INFO  Hooks:37 - SCENARIO NAME || Search for a product and get the details of a specific product from search results || STATUS ||failed
+2020-02-14 14:02:573 INFO  Hooks:51 - Teardown started..
+2020-02-14 14:02:197 INFO  Hooks:53 - Closed all the browser windows
+2020-02-14 14:02:197 INFO  Hooks:54 - #########################################   END OF SCENARIO  ########################################
+
+2020-02-14 14:02:200 INFO  Hooks:27 - #########################################   NEW SCENARIO  #########################################
+2020-02-14 14:02:200 INFO  Hooks:28 - SCENARIO NAME || Search for a product and get the details of a specific product from search results || STATUS || started
+2020-02-14 14:02:201 INFO  Hooks:29 - Initialising webdriver
+2020-02-14 14:02:360 INFO  TestSetup:67 - Wait time unit successfully set to seconds
+2020-02-14 14:02:365 INFO  TestSetup:100 - chrome driver initialized with implicit wait time [80] seconds
+2020-02-14 14:02:381 INFO  TestSetup:107 - chrome driver initialized with page load time [120] seconds
+2020-02-14 14:02:840 INFO  TestSetup:113 - Deleted all cookies
+2020-02-14 14:02:856 INFO  TestSetup:76 - Successfully initialised the webdriver
+2020-02-14 14:02:854 INFO  ProductsPage:41 - Product "Bose SoundLink Around Ear Wireless Headphones II - Black " is in the search result
+2020-02-14 14:02:516 INFO  ProductPage:54 - Expected price is $229.00 and actual price is $229.00
+2020-02-14 14:02:717 INFO  Hooks:37 - SCENARIO NAME || Search for a product and get the details of a specific product from search results || STATUS ||passed
+2020-02-14 14:02:177 INFO  Hooks:51 - Teardown started..
+2020-02-14 14:02:444 INFO  Hooks:53 - Closed all the browser windows
+2020-02-14 14:02:444 INFO  Hooks:54 - #########################################   END OF SCENARIO  ########################################
 

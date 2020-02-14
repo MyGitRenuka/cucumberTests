@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.cucumber.utility.ConditionalWait;
+
+import com.cucumber.handlers.ConditionalWaitHandler;
+import com.cucumber.validations.Verifier;
 
 /**
  * @author Renuka R Hosamani
@@ -15,7 +17,7 @@ import com.cucumber.utility.ConditionalWait;
 public class HomePage {
 	
 	private WebDriver driver;
-	private ConditionalWait conditionalWaits;
+	private ConditionalWaitHandler conditionalWaits;
 	
 	public WebDriver getDriver() {
 		return this.driver;
@@ -62,11 +64,12 @@ public class HomePage {
 	}
 		
 	public void setConditionalWait(WebDriverWait webdriverWait,long timeout) {
-		conditionalWaits = new ConditionalWait(webdriverWait, timeout);
+		conditionalWaits = new ConditionalWaitHandler(webdriverWait, timeout);
 	}
 	
-	public void waiForSignInVisibility() {		
-		conditionalWaits.waitForElementVisibility(getSignIn(), "SIGN IN BUTTON");
+	public void waitForSignInVisibility() {		
+		String message="SIGN-IN BUTTON PRESENT";
+		Verifier.verifyTrue(getSignIn().isDisplayed(), message);
 	}
 	
 	public SignInPage goToSignInPage() {

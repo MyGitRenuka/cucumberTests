@@ -9,6 +9,6 @@ And I click on the product "<product_name>"
 Then I can see the price "<price>" and review "<reviews>" of the selected product
 
 Examples:
-	| product 		| product_name 																																						 																								 | price  		| reviews |
-	| arris modem | ARRIS Surfboard Docsis 3.1 Gigabit Cable Modem Plus AC2350 Dual Band Wi-Fi Router, Certified for Xfinity, and Cox 1 GB Service (SBG8300) | $257.99		| average	|
-	| led tv			| LG Electronics 24LH4830-PU 24-Inch Smart LED TV (2016 Model) 																																						 | $111.99	  |	good		|
+	| product 		  	| product_name 																																						 																								 | price  		| reviews |
+	| pendrive sony 	| Sony 64GB MicroVault Q-Series USB Flash Drive (USM64GQX/B) 	| $50			| average	|
+	| headphones bose | Bose SoundLink Around Ear Wireless Headphones II - Black    | $229.00 |	good		|

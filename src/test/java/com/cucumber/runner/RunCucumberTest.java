@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
  *
  * 
  */
-@CucumberOptions(features= {"src/test/resources/features/login"},
+@CucumberOptions(features= {"src/test/resources/features"},
 				 glue= {"com.cucumber.steps"}, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 							"json:target/cucumber-reports/CucumberTestReport.json", 
 							"rerun:target/cucumber-reports/rerun.txt" })

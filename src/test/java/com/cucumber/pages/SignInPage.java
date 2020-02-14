@@ -9,8 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.cucumber.handlers.ConditionalWaitHandler;
 import com.cucumber.init.TestSetup;
-import com.cucumber.utility.ConditionalWait;
+import com.cucumber.validations.Verifier;
 
 /**
  * @author Renuka R Hosamani
@@ -20,7 +21,7 @@ import com.cucumber.utility.ConditionalWait;
 public class SignInPage extends TestSetup{
 	
 	private final WebDriver driver;
-	private ConditionalWait conditionalWaits;
+	private ConditionalWaitHandler conditionalWaits;
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -91,17 +92,23 @@ public class SignInPage extends TestSetup{
 		getContinueEmailBtn().click();
 	}
 	
-	public boolean isItSignInPage() {
+	public boolean loginSuccess() {
 		return getSignOutMenuOption().isDisplayed();
 	}
 	
 	public void setConditionalWait(WebDriverWait webdriverWait,long timeout) {
-		conditionalWaits = new ConditionalWait(webdriverWait, timeout);
+		conditionalWaits = new ConditionalWaitHandler(webdriverWait, timeout);
+	}
+	
+	public void clickOnNavigationMenu() {
+		String message="Navigation menu displayed";
+		Verifier.verifyTrue(getNavigationBar().isDisplayed(), message);
+		getNavigationBar().click();	
 	}
 	
 	public void waiForSignOutVisibility() {	
-		getNavigationBar().click();
-		conditionalWaits.waitForElementVisibility(getSignOutMenuOption(), "SIGN-OUT MENU OPTION");
+		String message="Sign out visibility";		
+		Verifier.verifyTrue(loginSuccess(), message);
 	}
 
 }
